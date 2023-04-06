@@ -1,0 +1,44 @@
+{
+  "name": "BabaGhanoush",
+  "version": "1.0.0",
+  "description": "Gefällt dir sehr",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "seed": "node seed.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abschluss-Projeckt/back-end.git"
+  },
+  "keywords": [],
+  "author": "cool-coders",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abschluss-Projeckt/back-end/issues"
+  },
+  "homepage": "https://github.com/Abschluss-Projeckt/back-end#readme",
+  "dependencies": {
+    "ajv": "^8.12.0",
+    "ajv-formats": "^2.1.1",
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "^1.4.6",
+    "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^6.10.0",
+    "multer": "^1.4.5-lts.1",
+    "passport": "^0.6.0",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "nodemon": "^2.0.20"
+  }
+}

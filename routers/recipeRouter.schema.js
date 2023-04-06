@@ -1,0 +1,33 @@
+export const postSchema = {
+  type: "object",
+  properties: {
+    name: { type: "string" },
+    explanation: { type: "string" },
+    description: { type: "array", items: { type: "string" } },
+    ingredients: { type: "array" },
+    category: { type: "object" },
+    image: { type: "string" },
+    preparationTime: { type: "number" },
+    portion: { type: "number" },
+    comments: { type: "array" },
+    recipeRanking: { type: "array" },
+    user: {
+      type: "string",
+      minLength: 24,
+      maxLength: 24,
+    },
+  },
+  required: [
+    "name",
+    "description",
+    "ingredients",
+    "category",
+    "image",
+    "portion",
+    "preparationTime",
+    "explanation",
+    "comments",
+    "recipeRanking",
+  ],
+  additionalProperties: false,
+};
