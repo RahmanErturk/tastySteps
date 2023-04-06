@@ -19,7 +19,7 @@ router
   .get(
     "/google/callback",
     passport.authenticate("google", {
-      failureRedirect: "https://tastysteps.onrender.com/register",
+      failureRedirect: "/register",
     }),
     async (req, res) => {
       res.cookie("logged_in", req.session.passport.user, {
@@ -27,7 +27,7 @@ router
         maxAge: 1000 * 60 * 60 * 24,
         httpOnly: false,
       });
-      await res.redirect("https://tastysteps.onrender.com");
+      await res.redirect("/");
     }
   );
 
