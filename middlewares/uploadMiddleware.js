@@ -9,7 +9,7 @@ const __dirname = path.dirname(__filename);
 // Disk depolama alanı oluşturuyoruz
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "./files/frontend/uploads");
+    cb(null, "./files/frontend/imgs");
   },
   filename: function (req, file, cb) {
     cb(null, file.originalname);

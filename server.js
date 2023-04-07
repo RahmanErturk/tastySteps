@@ -32,7 +32,7 @@ const port = process.env.PORT || 4000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const uploadDir = path.join(__dirname, "files/frontend", "uploads");
+const uploadDir = path.join(__dirname, "files/frontend", "imgs");
 
 app.use(
   session({
@@ -70,7 +70,7 @@ app.post("/api/upload-image", upload.single("image"), async (req, res) => {
   try {
     res.status(200).json({
       fileName: req.file.filename,
-      filePath: "/uploads/" + req.file.filename,
+      filePath: "/imgs/" + req.file.filename,
     });
   } catch (err) {
     console.error(err);
